@@ -47,16 +47,16 @@ class TiledProjector implements VolatileProjector
 	/**
 	 * Projectors for individual tiles.
 	 */
-	public List< VolatileProjector > tileProjectors;
+        private List< VolatileProjector > tileProjectors;
 
 	/**
 	 * Time needed for rendering the last frame, in nano-seconds.
 	 */
-	public long lastFrameRenderNanoTime;
+	private long lastFrameRenderNanoTime;
 
-	public volatile boolean canceled = false;
+	private volatile boolean canceled = false;
 
-	public boolean valid = false;
+	private boolean valid = false;
 
 	public TiledProjector( final List< VolatileProjector > tileProjectors )
 	{
