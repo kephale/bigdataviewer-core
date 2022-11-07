@@ -58,7 +58,7 @@ class TiledProjector implements VolatileProjector
 
 	private boolean valid = false;
 
-	TiledProjector( final List< VolatileProjector > tileProjectors )
+        public TiledProjector( final List< VolatileProjector > tileProjectors )
 	{
 		this.tileProjectors = tileProjectors;
 		lastFrameRenderNanoTime = -1;
