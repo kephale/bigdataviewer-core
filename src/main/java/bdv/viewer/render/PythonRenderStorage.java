@@ -51,15 +51,10 @@ class PythonRenderStorage extends RenderStorage
      */
     private final int[][] renderImageArrays;
 
-    public PythonRenderStorage( final int screenW, final int screenH, final int numVisibleSources )
-    {
-        final int size = screenW * screenH;
-        renderMaskArrays = new byte[ numVisibleSources ][ size ];
-        renderImageArrays = new int[ numVisibleSources ][ size ];
-    }
     
     public PythonRenderStorage( final byte[][] renderMaskArrays, final int[][] renderImageArrays)
     {
+        super(1, 1, 1);// I know ew
         this.renderMaskArrays = renderMaskArrays;
         this.renderImageArrays = renderImageArrays;
     }
