@@ -54,14 +54,32 @@ class PythonRenderStorage extends RenderStorage
     
     public PythonRenderStorage( final byte[][] renderMaskArrays, final int[][] renderImageArrays)
     {
-        super(1, 1, 1);// I know ew
+        // super(1, 1, 1);// I know ew
         this.renderMaskArrays = renderMaskArrays;
         this.renderImageArrays = renderImageArrays;
+    }
+
+    public static RenderStorage create( final byte[][] renderMaskArrays, final int[][] renderImageArrays)
+    {
+        rs = PythonRenderStorage();
+        rs.setMaskArray(renderMaskArrays);
+        rs.setRenderImage(renderImageArrays);
+        return rs;
+    }
+
+    public void setMaskArray(final byte[][] renderMaskArrays)
+    {
+        this.renderMaskArrays = renderMaskArrays;
     }
     
     public byte[] getMaskArray( final int index )
     {
         return renderMaskArrays[ index ];
+    }
+
+    public void setRenderImage(final int[][] renderImageArrays)
+    {
+        this.renderImageArrays = renderImageArrays;
     }
     
     public RandomAccessibleInterval< ARGBType > getRenderImage( final int width, final int height, final int index )
