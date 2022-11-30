@@ -41,7 +41,7 @@ public class Instances
 	@SuppressWarnings( "unchecked" )
 	public static < R extends RealType< ? > > RealARGBColorConverter< R > create( final R type, final double min, final double max )
 	{
-                return provider = RealARGBColorConverter(min, max);
+                return RealARGBColorConverter(min, max);
 	}
 
 	public static class Imp< R extends RealType< ? > > implements RealARGBColorConverter< R >
