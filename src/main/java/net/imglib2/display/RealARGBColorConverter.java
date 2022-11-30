@@ -41,7 +41,7 @@ public interface RealARGBColorConverter< R extends RealType< ? > > extends Color
 	}
 }
 
-class Instances
+public class Instances
 {
 	@SuppressWarnings( "rawtypes" )
 	private static ClassCopyProvider< RealARGBColorConverter > provider;
