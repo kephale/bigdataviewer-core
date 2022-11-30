@@ -61,7 +61,7 @@ class PythonRenderStorage extends RenderStorage
 
     public static RenderStorage create( final byte[][] renderMaskArrays, final int[][] renderImageArrays)
     {
-        rs = PythonRenderStorage();
+        RenderStorage rs = PythonRenderStorage();
         rs.setMaskArray(renderMaskArrays);
         rs.setRenderImage(renderImageArrays);
         return rs;
