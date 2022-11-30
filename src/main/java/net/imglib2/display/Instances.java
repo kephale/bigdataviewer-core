@@ -41,15 +41,7 @@ public class Instances
 	@SuppressWarnings( "unchecked" )
 	public static < R extends RealType< ? > > RealARGBColorConverter< R > create( final R type, final double min, final double max )
 	{
-		if ( provider == null )
-		{
-			synchronized ( Instances.class )
-			{
-				if ( provider == null )
-					provider = new ClassCopyProvider<>( Imp.class, RealARGBColorConverter.class, double.class, double.class );
-			}
-		}
-		return provider.newInstanceForKey( type.getClass(), min, max );
+                return provider = RealARGBColorConverter(min, max);
 	}
 
 	public static class Imp< R extends RealType< ? > > implements RealARGBColorConverter< R >
