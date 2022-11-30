@@ -41,7 +41,7 @@ class PythonRenderStorage extends RenderStorage
      * Storage for mask images of {@link VolatileHierarchyProjector}. One array
      * per visible source.
      */
-    private final byte[][] renderMaskArrays;
+    private byte[][] renderMaskArrays;
     
     /**
      * Storage for render images of {@link VolatileHierarchyProjector}.
@@ -49,7 +49,7 @@ class PythonRenderStorage extends RenderStorage
      * One array per visible source, if more than one source is visible.
      * (If exactly one source is visible, it is rendered directly to the target image.)
      */
-    private final int[][] renderImageArrays;
+    private int[][] renderImageArrays;
 
     
     public PythonRenderStorage( final byte[][] renderMaskArrays, final int[][] renderImageArrays)
@@ -59,13 +59,13 @@ class PythonRenderStorage extends RenderStorage
         this.renderImageArrays = renderImageArrays;
     }
 
-    public static RenderStorage create( final byte[][] renderMaskArrays, final int[][] renderImageArrays)
-    {
-        RenderStorage rs = PythonRenderStorage();
-        rs.setMaskArray(renderMaskArrays);
-        rs.setRenderImage(renderImageArrays);
-        return rs;
-    }
+    // public static RenderStorage create( final byte[][] renderMaskArrays, final int[][] renderImageArrays)
+    // {
+    //     RenderStorage rs = PythonRenderStorage();
+    //     rs.setMaskArray(renderMaskArrays);
+    //     rs.setRenderImage(renderImageArrays);
+    //     return rs;
+    // }
 
     public void setMaskArray(final byte[][] renderMaskArrays)
     {

@@ -54,13 +54,14 @@ class RenderStorage
 	public RenderStorage( final int screenW, final int screenH, final int numVisibleSources )
 	{
             final int size = screenW * screenH;
-		renderMaskArrays = new byte[ numVisibleSources ][ size ];
-		renderImageArrays = new int[ numVisibleSources ][ size ];
+            renderMaskArrays = new byte[ numVisibleSources ][ size ];
+            renderImageArrays = new int[ numVisibleSources ][ size ];
 	}
 
     public RenderStorage()
     {
-        
+        renderMaskArrays = null;
+        renderImageArrays = null;
     }
 
 	public byte[] getMaskArray( final int index )
