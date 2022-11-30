@@ -33,7 +33,7 @@ import net.imglib2.loops.ClassCopyProvider;
 import net.imglib2.type.numeric.ARGBType;
 import net.imglib2.type.numeric.RealType;
 
-public static class Imp< R extends RealType< ? > > implements RealARGBColorConverter< R >
+public class Imp< R extends RealType< ? > > implements RealARGBColorConverter< R >
 {
     private double min = 0;
 
